@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;600&display=swap');
+
+:root {
+  --pink: #f594a6;
+  --pink-dark: #e0607a;
+  --text: #222;
+  --muted: #555;
+  --bg: #fff;
+  --nav-height: 64px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--text);
+}
+
+/* ── Navbar ── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  height: var(--nav-height);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 2px solid var(--pink);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.navbar-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  align-items: center;
+}
+
+.navbar-item { position: relative; }
+
+.navbar-link {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  padding-bottom: 4px;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-item:hover .navbar-link,
+.navbar-item.active .navbar-link {
+  color: var(--pink-dark);
+  border-bottom-color: var(--pink);
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-search {
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar-search:focus { border-color: var(--pink); }
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s;
+}
+
+.icon-btn:hover { transform: scale(1.15); }
+
+/* ── Overlay ── */
+.navbar-overlay {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.25);
+  z-index: 299;
+}

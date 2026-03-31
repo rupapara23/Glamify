@@ -1,0 +1,13 @@
+/* ✅ IMPORTANT: Add this to your Navbar CSS */
+/* Your navbar or any parent wrapper MUST NOT have overflow: hidden */
+
+.navbar {
+  position: relative;
+  overflow: visible;   /* <-- this is critical */
+  z-index: 999;
+}
+
+/* If your navbar uses a container class, apply the same: */
+.navbar-container {
+  overflow: visible;
+}

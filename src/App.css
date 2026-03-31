@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}

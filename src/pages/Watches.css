@@ -1,0 +1,142 @@
+.watch-page {
+  background: linear-gradient(135deg, #f6f7fb, #ffffff);
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.watch-banner {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 6px;
+}
+.watch-img-box {
+  position: relative;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.watch-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 60px;
+}
+
+.watch-card {
+  background: rgb(241, 241, 241);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.watch-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.watch-img-box {
+  overflow: hidden;
+  position: relative;
+}
+
+.watch-img-box img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: 0.4s;
+  border-radius: 6px;
+}
+
+.watch-card:hover img {
+  transform: scale(1.1);
+}
+
+.watch-card h3 {
+  margin-top: 15px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #222;
+}
+
+.watch-card p {
+  font-size: 19px;
+  font-weight: bold;
+  color: #e63946;
+  margin-top: 6px;
+}
+
+.cart-btn {
+  width: 85%;
+  margin-top: 14px;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #000, #444);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(15px);
+  transition: 0.35s;
+}
+
+.watch-card:hover .cart-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cart-btn:hover {
+  background: linear-gradient(45deg, #ff4d6d, #e63946);
+  transform: scale(1.06);
+}
+@media (max-width: 600px) {
+  .watch-container {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    gap: 20px;
+  }
+
+  .watch-banner {
+    height: 200px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .watch-img-box img {
+    height: 200px;
+  }
+
+  .cart-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
