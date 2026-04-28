@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ── DARK MODE ── */
+.dark body,
+.dark #root { 
+  background-color: #070707; 
+}
+
+.dark .bg-white { background-color: #070707 !important; }
+.dark .bg-gray-50 { background-color: #070707 !important; }
+.dark .bg-gray-100 { background-color: #070707 !important; }
+.dark .bg-gray-50\/30 { background-color: #070707 !important; }
+.dark header { background-color: #070707 !important; border-color: #374151 !important; }
+.dark aside { background-color: #070707 !important; border-color: #374151 !important; }
+
+/* Text colors */
+.dark .text-gray-900 { color: #ffffff !important; }
+.dark .text-gray-800 { color: #ffffff !important; }
+.dark .text-gray-700 { color: #ffffff !important; }
+.dark .text-gray-600 { color: #ffffff !important; }
+.dark .text-gray-500 { color: #ffffff !important; }
+.dark .text-gray-400 { color: #ffffff !important; }
+.dark .text-gray-300 { color: #ffffff !important; }
+
+/* Borders */
+.dark .border-gray-50  { border-color: #070707 !important; }
+.dark .border-gray-100 { border-color: #070707 !important; }
+.dark .border-gray-200 { border-color: #070707 !important; }
+
+/* Inputs */
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+  border-color: #374151 !important;
+}
+.dark input::placeholder,
+.dark textarea::placeholder { color: #070707 !important; }
+
+/* Table */
+.dark table thead tr { background-color: #070707 !important; }
+.dark table tbody tr { background-color: #070707 !important; border-color: #070707 !important; }
+.dark table tbody tr:hover { background-color: #070707 !important; }
+
+/* Hover */
+.dark .hover\:bg-gray-50:hover { background-color: #070707 !important; }
+.dark .hover\:bg-gray-100:hover { background-color: #070707 !important; }
+
+/* Alerts */
+.dark .bg-red-50    { background-color: rgba(239, 68, 68, 0.15) !important; }
+.dark .bg-green-50  { background-color: rgba(34, 197, 94, 0.15) !important; }
+.dark .bg-indigo-50 { background-color: rgba(99, 102, 241, 0.15) !important; }
+.dark .bg-purple-50 { background-color: rgba(168, 85, 247, 0.15) !important; }
+
+/* Divider */
+.dark .bg-gray-200 { background-color: #070707 !important; }
+
+/* Shadows */
+.dark .shadow-sm,
+.dark .shadow,
+.dark .shadow-xl,
+.dark .shadow-2xl { box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important; }
+
+/* Login page */
+.dark .from-indigo-950 { --tw-gradient-from: #070707 !important; }
+.dark .via-indigo-900  { --tw-gradient-via: #070707 !important; }
+.dark .to-indigo-700   { --tw-gradient-to: #070707 !important; }
+
+/* Popup */
+.dark .bg-black\/40 { background-color: rgba(0,0,0,0.6) !important; }
