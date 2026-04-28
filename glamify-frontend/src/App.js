@@ -12,6 +12,7 @@ import Register from "./pages/Register";
 import Wishlist from "./pages/Wishlist";
 import Cart from "./pages/Cart";
 import SearchBar from "./components/SearchBar";
+import Checkout from "./pages/Checkout";
 // import Totes from "./pages/Totes";
 // import Mens from "./pages/Mens";
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/sunglasses" element={<Sunglasses />} />
           <Route path="/watches" element={<Watches />} />
           <Route path="/jewelry" element={<Jewelry />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/wishlist" element={<Wishlist />} />

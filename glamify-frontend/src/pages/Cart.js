@@ -1,16 +1,14 @@
 import { useContext } from "react";
 import { CartContext } from "../pages/CartContext";
 import "./Cart.css";
-
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
+  const navigate = useNavigate();
   const { cart, removeFromCart, increaseQty, decreaseQty } =
     useContext(CartContext);
 
-  const total = cart.reduce(
-    (acc, item) => acc + item.price * item.qty,
-    0
-  );
+  const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
 
   return (
     <div className="cart-container">
@@ -22,11 +20,18 @@ function Cart() {
         <>
           {cart.map((item) => (
             <div className="cart-card" key={item.id}>
-              <img src={item.image} alt={item.name} />
+              <img
+                src={
+                  item.image?.startsWith("http")
+                    ? item.image
+                    : `http://localhost:5000${item.image}`
+                }
+                alt={item.name}
+              />
 
               <div className="cart-details">
                 <h5>{item.name}</h5>
-                <p>₹{item.price.toLocaleString('en-IN')}</p>
+                <p>₹{item.price.toLocaleString("en-IN")}</p>
 
                 <div className="qty-box">
                   <button onClick={() => decreaseQty(item.id)}>-</button>
@@ -44,7 +49,13 @@ function Cart() {
             </div>
           ))}
 
-          <h3 className="total">Total: ₹{total.toLocaleString('en-IN')}</h3>
+          <h3 className="total">Total: ₹{total.toLocaleString("en-IN")}</h3>
+          <button
+            onClick={() => navigate("/checkout")}
+            className="checkout-btn"
+          >
+            Proceed to Checkout →
+          </button>
         </>
       )}
     </div>
